@@ -1,0 +1,16 @@
+[project]
+name = "stacks-btc-bridge"
+requirements = []
+costs_version = 2
+[contracts.cross-chain-bridge]
+path = "contracts/cross-chain-bridge.clar"
+depends_on = []
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
