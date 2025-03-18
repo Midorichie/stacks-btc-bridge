@@ -2,9 +2,14 @@
 name = "stacks-btc-bridge"
 requirements = []
 costs_version = 2
+
 [contracts.cross-chain-bridge]
 path = "contracts/cross-chain-bridge.clar"
 depends_on = []
+
+[contracts.token-bridge]
+path = "contracts/token-bridge.clar"
+depends_on = ["cross-chain-bridge"]
 
 [repl.analysis]
 passes = ["check_checker"]
